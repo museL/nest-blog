@@ -1,0 +1,31 @@
+type Query {
+    posts: [Post]
+    post(id: ID!): Post
+    getUserPage(pageIndex: Int, pageSize: Int): [Post]
+}
+
+type Post {
+  number: Int
+  title: String
+  content: String
+}
+
+
+type Mutation {
+  createPost(post: PostInput!): Result
+  updateUser(id: ID!, post: PostInput!): Boolean
+  delUser(id: ID!): Boolean
+}
+
+input PostInput {
+  title: String!
+  content: String!
+  userId: Int!
+  token: String
+}
+
+
+type Result {
+  code: Int
+  message: String
+}
