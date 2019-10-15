@@ -3,7 +3,7 @@
   "host": "114.67.101.191",
   "port": 3306,
   "username": "root",
-  "password": "qq83828826",
+  "password": "********",
   "database": "blog",
   "entities": ["src/**/**.entity{.ts,.js}"],
   "synchronize": true
